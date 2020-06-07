@@ -4,7 +4,7 @@ fig = px.scatter(df, x="sepal_width", y="sepal_length")
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-app = dash.Dash()
+app = dash.Dash(__name__)
 app.layout = html.Div([
     dcc.Graph(figure=fig)
     
